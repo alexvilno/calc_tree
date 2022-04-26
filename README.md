@@ -1,7 +1,7 @@
 # Нахождение центра, радиуса и диаметра дерева, заданного двоичным кодом
 Алгоритм позволяет найти количество вершин, образующих центр, диаметр и радиус дерева, заданного **двоичным кодом**
 ## Постановка задачи
-Исходные данные берутся из файла **[input.txt](https://github.com/alexvilno/calc_tree/blob/ver_1.0/cmake-build-debug/input.txt)**.  В первой строке записано одно число **n** &mdash количество вершин в дереве. Во второй строке располагается двоичный код. Нужно записать **три числа** в файл **[output.txt](https://github.com/alexvilno/calc_tree/blob/ver_1.0/cmake-build-debug/output.txt)** количество вершин, образующих центр, радиус и диаметр.
+Исходные данные берутся из файла **[input.txt](https://github.com/alexvilno/calc_tree/blob/ver_1.0/cmake-build-debug/input.txt)**.  В первой строке записано одно число **n** &mdash; количество вершин в дереве. Во второй строке располагается двоичный код. Нужно записать **три числа** в файл **[output.txt](https://github.com/alexvilno/calc_tree/blob/ver_1.0/cmake-build-debug/output.txt)** количество вершин, образующих центр, радиус и диаметр.
 ## Пример решённой задачи
 Для входных данных
 ```
@@ -28,13 +28,13 @@ std::vector<std::vector<int>> ReadTree(std::istream &in) {
   return std::move(tree);
 }
 ```
-Она создает список смежности на базе ```std::vector<std::vector<int>>``` первая его координата &mdash рассматриваемая вершина, вторая &mdash вершина, которая ей смежна.
+Она создает список смежности на базе ```std::vector<std::vector<int>>``` первая его координата &mdash; рассматриваемая вершина, вторая &mdash вершина, которая ей смежна.
 Например список смежности для дерева, заданного двоичным кодом ```0011``` будет выглядеть так:
 
 ![image](https://sun1-89.userapi.com/s/v1/ig2/6vg5WnpLNt93ctXxJUkw77DsPby0VhF6NKNYAf0WNTWO17T_47_Js4YrXWODDslN29qcS3jI0wC_ccJ3WZXsxphh.jpg?size=366x243&quality=96&type=album)
 
 То есть по сути, наш **список смежности** выглядит так:
 
-```tree[c][0] = v``` &mdash вершина c смежна вершине v
+```tree[c][0] = v``` &mdash; вершина c смежна вершине v
 
 
