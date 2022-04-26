@@ -28,7 +28,7 @@ std::vector<std::vector<int>> ReadTree(std::istream &in) {
   return std::move(tree);
 }
 ```
-Она создает список смежности на базе ```std::vector<std::vector<int>>``` первая его координата &mdash; рассматриваемая вершина, вторая &mdash вершина, которая ей смежна.
+Она принимает в качестве аргумента входящий поток ```std::istream &in``` и создает список смежности на базе ```std::vector<std::vector<int>>``` первая его координата &mdash; рассматриваемая вершина, вторая &mdash вершина, которая ей смежна.
 Например список смежности для дерева, заданного двоичным кодом ```0011``` будет выглядеть так:
 
 ![image](https://sun1-89.userapi.com/s/v1/ig2/6vg5WnpLNt93ctXxJUkw77DsPby0VhF6NKNYAf0WNTWO17T_47_Js4YrXWODDslN29qcS3jI0wC_ccJ3WZXsxphh.jpg?size=366x243&quality=96&type=album)
@@ -37,4 +37,28 @@ std::vector<std::vector<int>> ReadTree(std::istream &in) {
 
 ```tree[c][0] = v``` &mdash; вершина c смежна вершине v
 
+Создается он следующим образом:
 
+Вызывается **рекурсивная функция** 
+```cpp
+void ReadTreeRec(std::istream &in, std::vector<std::vector<int>> &tree, int v) {
+  ...
+}
+```
+Кроме входящего потока, она принимает, собственно, список смежности, который требуется заполнить и параметр ```int v``` &mdash; индекс вершины
+
+Работает он так:
+```cpp
+void ReadTreeRec(std::istream &in, std::vector<std::vector<int>> &tree, int v) {
+  for (char command; in >> command && command != '1';) {
+    int u = tree.size();
+    tree.emplace_back();  //create in end
+    tree[v].push_back(u); //create and push
+    tree[u].push_back(v);
+    ReadTreeRec(in, tree, u);
+  }
+}
+```
+- Из входящего потока считывается **двоичный код**
+- Если считываемый символ ```command != '1'``` тогда
+- - создается переменная ```u``` равная **размеру списка смежности**
