@@ -118,7 +118,8 @@ int CountDiameterLength(std::vector<std::vector<int>> &tree) {
 Используем сайт [graphonline](https://graphonline.ru/)
 
 
-**1**
+**Тест 1**
+
 ![image](https://graphonline.ru/tmp/saved/EG/EGBFwxsuWacnWvBw.png) 
 
 Входные данные: 
@@ -132,7 +133,8 @@ int CountDiameterLength(std::vector<std::vector<int>> &tree) {
 ```
 ![image](https://graphonline.ru/tmp/saved/ot/otvXsnevaLOGGkgd.png)
 
-**2**
+**Тест 2**
+
 ![image](https://graphonline.ru/tmp/saved/eP/ePxAgEEbaPHnLYDs.png) 
 
 Входные данные: 
@@ -146,7 +148,8 @@ int CountDiameterLength(std::vector<std::vector<int>> &tree) {
 ```
 ![image](https://graphonline.ru/tmp/saved/qZ/qZefgaLICjVOHyvM.png)
 
-**3**
+**Тест 3**
+
 ![image](https://graphonline.ru/tmp/saved/zm/zmSWwbLsykBCMdDw.png) 
 
 Входные данные: 
@@ -160,7 +163,8 @@ int CountDiameterLength(std::vector<std::vector<int>> &tree) {
 ```
 ![image](https://graphonline.ru/tmp/saved/me/mezUQkZgaCGLutsw.png)
 
-**4**
+**Тест 4**
+
 ![image](https://graphonline.ru/tmp/saved/EG/EGBFwxsuWacnWvBw.png) 
 
 Входные данные: 
@@ -174,7 +178,8 @@ int CountDiameterLength(std::vector<std::vector<int>> &tree) {
 ```
 ![image](https://graphonline.ru/tmp/saved/ot/otvXsnevaLOGGkgd.png)
 
-**5**
+**Тест 5**
+
 ![image](https://graphonline.ru/tmp/saved/EG/EGBFwxsuWacnWvBw.png) 
 
 Входные данные: 
@@ -188,7 +193,8 @@ int CountDiameterLength(std::vector<std::vector<int>> &tree) {
 ```
 ![image](https://graphonline.ru/tmp/saved/ot/otvXsnevaLOGGkgd.png)
 
-**6**
+**Тест 6**
+
 ![image](https://graphonline.ru/tmp/saved/EG/EGBFwxsuWacnWvBw.png) 
 
 Входные данные: 
