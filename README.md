@@ -116,3 +116,16 @@ int CountDiameterLength(std::vector<std::vector<int>> &tree) {
 ## Тесты коррекности
 
 Используем сайт [graphonline](https://graphonline.ru/)
+
+![image](https://graphonline.ru/tmp/saved/EG/EGBFwxsuWacnWvBw.png) 
+
+Входные данные: 
+```
+13
+00011100011011000111
+```
+Выходные данные:
+```
+1 3 6
+```
+![image](https://graphonline.ru/tmp/saved/ot/otvXsnevaLOGGkgd.png)
