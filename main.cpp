@@ -1,6 +1,8 @@
 #include <fstream>
 #include <iostream>
 #include <vector>
+#include <string>
+#include <random>
 
 void ReadTreeRec(std::istream &in, std::vector<std::vector<int>> &tree, int v) {
   for (char command; in >> command && command != '1';) {
@@ -45,6 +47,39 @@ int CountDiameterLength(std::vector<std::vector<int>> &tree) {
   distances[new_root] = 0;
   CountMaxDistanceRec(tree, distances, -1, new_root);
   return distances[FindVertexWithMaxDistance(distances)];
+}
+
+std::string tree_generator(int v_count) {
+  std::random_device random_device;
+  std::mt19937 generator(random_device());
+  std::uniform_int_distribution<> distribution(0, 1);
+
+  std::string generated = "";
+  int count_0 = 0;
+  int count_1 = 0;
+
+  for (int i = 0; i < v_count * 2; ++i) {
+    int x = distribution(generator);
+
+    if (count_0 >= v_count) {
+      x = 1;
+      generated += x + 48;
+      continue;
+    }
+    if (x == 1 && count_1 < count_0) {
+      generated += x + 48;
+      ++count_1;
+    } else if (x == 1 && count_1 >= count_0) {
+      x = 0;
+      generated += x + 48;
+      ++count_0;
+    } else {
+      generated += x + 48;
+      x == 1 ? ++count_1 : ++count_0;
+    }
+  }
+
+  return generated;
 }
 
 int main() {
