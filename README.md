@@ -165,47 +165,31 @@ int CountDiameterLength(std::vector<std::vector<int>> &tree) {
 
 **Тест 4**
 
-![image](https://graphonline.ru/tmp/saved/EG/EGBFwxsuWacnWvBw.png) 
+![image](https://graphonline.ru/tmp/saved/rR/rRigwOjWuvSfZwNB.png) 
 
 Входные данные: 
 ```
 10
-00011100011011000111
+001000101101100111
 ```
 Выходные данные:
 ```
-1 3 6
+2 3 5
 ```
-![image](https://graphonline.ru/tmp/saved/ot/otvXsnevaLOGGkgd.png)
+![image](https://graphonline.ru/tmp/saved/xw/xweeEnWbHODjkLtb.png)
 
 **Тест 5**
 
-![image](https://graphonline.ru/tmp/saved/EG/EGBFwxsuWacnWvBw.png) 
+![image](https://graphonline.ru/tmp/saved/cd/cdjewjYXQJBYNatV.png) 
 
 Входные данные: 
 ```
-13
-00011100011011000111
+5
+00001111
 ```
 Выходные данные:
 ```
-1 3 6
+1 2 4
 ```
-![image](https://graphonline.ru/tmp/saved/ot/otvXsnevaLOGGkgd.png)
-
-**Тест 6**
-
-![image](https://graphonline.ru/tmp/saved/EG/EGBFwxsuWacnWvBw.png) 
-
-Входные данные: 
-```
-13
-00011100011011000111
-```
-Выходные данные:
-```
-1 3 6
-```
-![image](https://graphonline.ru/tmp/saved/ot/otvXsnevaLOGGkgd.png)
-
+![image](https://graphonline.ru/tmp/saved/qh/qhAaVsilvoFQJnKL.png)
 
