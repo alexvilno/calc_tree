@@ -28,4 +28,6 @@ std::vector<std::vector<int>> ReadTree(std::istream &in) {
   return std::move(tree);
 }
 ```
-Она создает список смежности на базе ```cpp std::vector<std::vector<int>>```
+Она создает список смежности на базе ```std::vector<std::vector<int>>``` первая его координата &mdash рассматриваемая вершина, вторая &mdash вершина, которая ей смежна.
+Например список смежности для дерева, заданного двоичным кодом ```0011``` будет выглядеть так:
+![image](https://sun1-89.userapi.com/s/v1/ig2/6vg5WnpLNt93ctXxJUkw77DsPby0VhF6NKNYAf0WNTWO17T_47_Js4YrXWODDslN29qcS3jI0wC_ccJ3WZXsxphh.jpg?size=366x243&quality=96&type=album)
