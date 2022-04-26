@@ -70,3 +70,35 @@ void ReadTreeRec(std::istream &in, std::vector<std::vector<int>> &tree, int v) {
 Довольно логично, что каждую инициализацию переменная ```u = tree.size()``` будет равна индексу очередной вершины в списке смежности
 
 Когда мы получили список смежности, возвращаем его без копирования ```return std::move(tree)```
+
+## Считаем диаметр
+
+Теперь когда мы имеем список смежности для дерева, мы можем посчитать **диаметр** дерева.
+
+Считать будем следующим образом:
+- найдем самое **большое** расстояние от корня дерева до крайней вершины
+- найдем самое **большое** расстояние от этой вершины до других вершин 
+
+Функция, возвращающая **диаметр** дерева выглядит так:
+```cpp
+int CountDiameterLength(std::vector<std::vector<int>> &tree) {
+  int vertices_count = tree.size();
+  std::vector<int> distances(vertices_count);
+  CountMaxDistanceRec(tree, distances, -1, 0);
+  int new_root = FindVertexWithMaxDistance(distances);
+  distances[new_root] = 0;
+  CountMaxDistanceRec(tree, distances, -1, new_root);
+  return distances[FindVertexWithMaxDistance(distances)];
+}
+```
+
+В качестве аргумента она принимает ссылку на список смежности, созданный ранее
+
+- ```int vertices_count = tree.size()``` запоминаем количество вершин и создаем массив такого размера ```std::vector<int> distances(vertices_count)```
+- заполним этот массив **расстояниями** от корня дерева с помощью функции ```void CountMaxDistanceRec(const std::vector<std::vector<int>> &tree, std::vector<int> &distances, int p, int v)``` &mdash; она будет описана ниже
+- от нового "нового корня" (т.е. от той вершины, расстояние до которой будет максимально) также запишем новые **расстояния**
+- вернем максимальное расстояние, находящееся в массиве **расстояний** по индексу, возвращаемому функцией ```FindVertexWithMaxDistance(distances)``` (реализациия её тривиальна, описываться не будет)
+ 
+Как работает ```void CountMaxDistanceRec(const std::vector<std::vector<int>> &tree, std::vector<int> &distances, int p, int v)``` ? 
+ 
+Она принимает ссылку на список смежности, ссылку на массив **расстояний** индекс родительского элемента (для корня это -1) и индекс элемента, от которого считаются расстояния
