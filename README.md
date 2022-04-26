@@ -193,3 +193,63 @@ int CountDiameterLength(std::vector<std::vector<int>> &tree) {
 ```
 ![image](https://graphonline.ru/tmp/saved/qh/qhAaVsilvoFQJnKL.png)
 
+## Тесты производительности
+
+Для тестов производительности есть функция, возвращающая случайное дерево из n вершин в виде **двоичного кода**
+Вот ее описание:
+```cpp
+std::string tree_generator(int v_count) {
+  std::random_device random_device;
+  std::mt19937 generator(random_device());
+  std::uniform_int_distribution<> distribution(0, 1);
+
+  std::string generated = "";
+  int count_0 = 0;
+  int count_1 = 0;
+
+  for (int i = 0; i < v_count * 2; ++i) {
+    int x = distribution(generator);
+
+    if (count_0 >= v_count) {
+      x = 1;
+      generated += x + 48;
+      continue;
+    }
+    if (x == 1 && count_1 < count_0) {
+      generated += x + 48;
+      ++count_1;
+    } else if (x == 1 && count_1 >= count_0) {
+      x = 0;
+      generated += x + 48;
+      ++count_0;
+    } else {
+      generated += x + 48;
+      x == 1 ? ++count_1 : ++count_0;
+    }
+  }
+
+  return generated;
+}
+```
+
+| Количество | Время     |
+|          -:|         -:|
+|        100 |  0.003927 |
+|        200 |  0.015992 |
+|        300 |  0.034656 |
+|        400 |  0.063029 |
+|        500 |  0.099495 |
+|        600 |  0.146084 |
+|        700 |  0.200686 |
+|        800 |  0.267820 |
+|        900 |  0.342634 |
+|       1000 |  0.419897 |
+|       2000 |  1.805504 |
+|       3000 |  4.409858 |
+|       4000 |  7.823605 |
+|       5000 | 12.455837 |
+|       6000 | 18.458873 |
+|       7000 | 25.120442 |
+|       8000 | 33.252308 |
+|       9000 | 42.337381 |
+|      10000 | 52.894956 |
