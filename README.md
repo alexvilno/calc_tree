@@ -117,6 +117,8 @@ int CountDiameterLength(std::vector<std::vector<int>> &tree) {
 
 Используем сайт [graphonline](https://graphonline.ru/)
 
+
+**1**
 ![image](https://graphonline.ru/tmp/saved/EG/EGBFwxsuWacnWvBw.png) 
 
 Входные данные: 
@@ -129,3 +131,75 @@ int CountDiameterLength(std::vector<std::vector<int>> &tree) {
 1 3 6
 ```
 ![image](https://graphonline.ru/tmp/saved/ot/otvXsnevaLOGGkgd.png)
+
+**2**
+![image](https://graphonline.ru/tmp/saved/eP/ePxAgEEbaPHnLYDs.png) 
+
+Входные данные: 
+```
+7
+000101101011
+```
+Выходные данные:
+```
+2 2 3
+```
+![image](https://graphonline.ru/tmp/saved/qZ/qZefgaLICjVOHyvM.png)
+
+**3**
+![image](https://graphonline.ru/tmp/saved/zm/zmSWwbLsykBCMdDw.png) 
+
+Входные данные: 
+```
+12
+0001010110110001011011
+```
+Выходные данные:
+```
+1 3 6
+```
+![image](https://graphonline.ru/tmp/saved/me/mezUQkZgaCGLutsw.png)
+
+**4**
+![image](https://graphonline.ru/tmp/saved/EG/EGBFwxsuWacnWvBw.png) 
+
+Входные данные: 
+```
+10
+00011100011011000111
+```
+Выходные данные:
+```
+1 3 6
+```
+![image](https://graphonline.ru/tmp/saved/ot/otvXsnevaLOGGkgd.png)
+
+**5**
+![image](https://graphonline.ru/tmp/saved/EG/EGBFwxsuWacnWvBw.png) 
+
+Входные данные: 
+```
+13
+00011100011011000111
+```
+Выходные данные:
+```
+1 3 6
+```
+![image](https://graphonline.ru/tmp/saved/ot/otvXsnevaLOGGkgd.png)
+
+**6**
+![image](https://graphonline.ru/tmp/saved/EG/EGBFwxsuWacnWvBw.png) 
+
+Входные данные: 
+```
+13
+00011100011011000111
+```
+Выходные данные:
+```
+1 3 6
+```
+![image](https://graphonline.ru/tmp/saved/ot/otvXsnevaLOGGkgd.png)
+
+
